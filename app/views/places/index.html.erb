@@ -1,13 +1,11 @@
-<h1>Places</h1>
-<% if @current_user != nil %>
-<div class= "mb-3">
-<ul>
+<h1 class="h1">Places</h1>
+<div>
+  <a href="/places/new" class="mb-3 btn btn-primary">New place</a>
+</div>
+
+<ul class="list-group">
   <% for place in @places %>
-   <a href="/places/<%= place["id"] %>" class="btn btn-outline-dark"><%= place["name"] %></a>
-      </div>
+    <li class="list-group-item"><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
   <% end %>
 </ul>
 
-<p>
-  <a href="/places/new">New place</a>
-</p>
