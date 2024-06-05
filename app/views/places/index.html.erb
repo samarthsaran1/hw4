@@ -1,8 +1,10 @@
 <h1>Places</h1>
-
+<% if @current_user != nil %>
+<div class= "mb-3">
 <ul>
   <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+   <a href="/places/<%= place["id"] %>" class="btn btn-outline-dark"><%= place["name"] %></a>
+      </div>
   <% end %>
 </ul>
 
